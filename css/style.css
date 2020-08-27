@@ -1,6 +1,25 @@
+.wrapper {
+    width: 625px;
+    height: 625px;
+    background-color: tomato;
+    margin: 100px auto;
+}
+
 .square {
-    width: 30px;
-    height: 30px;
+    width: 100px;
+    height: 100px;
     border: 1px solid black;
-    display: inline-block;
+    margin: 1px 1px;
+    float: left;
+    text-align: center;
+    font-size: 20px;
+    line-height: 100px;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.green {
+    background-color: green;
 }
