@@ -14,12 +14,17 @@ $(document).ready(function(){
                     url: "https://flynn.boolean.careers/exercises/api/random/int",
                     method: "GET",
                     success: function (risposta) {
-                        box.text(risposta.response);
-                        //elaboro il risultato ottenuto assegnando una classe colore in base al valore
-                        if (risposta.response < 6) {
-                            $(box).addClass("yellow");
+                        if(box.hasClass('cliccato')){
+                            alert ('Già cliccato!');
                         } else {
-                            $(box).addClass("green");
+                            box.addClass('cliccato');
+                            box.text(risposta.response);
+                            //elaboro il risultato ottenuto assegnando una classe colore in base al valore
+                            if (risposta.response < 6) {
+                                box.addClass("yellow");
+                            } else {
+                                box.addClass("green");
+                            }
                         }
                     },
                     error: function (richiesta, stato, errori) {
